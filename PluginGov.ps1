@@ -1,4 +1,4 @@
-﻿# Silent Update autenticacao.gov 
+﻿# Silent Update plugin autenticação.gov 
 
 $nomeapp = "plugin Autenticação.Gov"
 $checkapp = Get-Package | Where-Object {$_.Name -like "*$nomeapp*"}
@@ -28,5 +28,3 @@ Remove-Item -Force "C:\installer\pluginAutenticacao.gov_Win_x64_signed.msi"
 } else {
     Write-Host "La aplicación $app NO está instalada."
 }
-
-#https://aplicacoes.autenticacao.gov.pt/plugin/Instalador%20plugin%20Autenticacao.Gov.msi
