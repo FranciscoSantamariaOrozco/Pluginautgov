@@ -1,9 +1,10 @@
 ﻿# Silent Update autenticacao.gov 
 
-$app = "plugin Autenticação.Gov*"
-Get-WmiObject -Class Win32_Product | Where-Object {$_.Name -like $app} | Select-Object Name
-if ($?) {
-    Write-Host "$appName is installed on this computer."
+$nomeapp = "plugin Autenticação.Gov"
+$checkapp = Get-Package | Where-Object {$_.Name -like "*$nomeapp*"}
+
+if ($checkapp) {
+    Write-Output "La aplicación $nomeapp está instalada en este equipo."
     $workdir = "c:\installer\"
     $Url = "https://aplicacoes.autenticacao.gov.pt/plugin/Instalador%20plugin%20Autenticacao.Gov.msi"
     $Path = "C:\installer\pluginAutenticacao.gov_Win_x64_signed.msi"
