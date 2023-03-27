@@ -7,3 +7,6 @@ if ($instalaciones) {
 } else {
     Write-Output "La aplicación $nombreApp NO está instalada en este equipo."
 }
+
+# V. Antiga: 2.0.70
+# V. Atual: 2.0.75
